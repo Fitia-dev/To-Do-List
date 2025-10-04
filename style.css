@@ -1,0 +1,193 @@
+:root {
+  --primary-color: #fff;
+  --secoondary-color: #262626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alan Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(wallhaven-d8p7w3_1600x900.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(6px);
+}
+
+.header {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  border: 3px solid white;
+  padding: 0.4rem;
+  border-radius: 8px;
+  text-align: center;
+  background-color: var(--secoondary-color);
+}
+
+.container {
+  width: 550px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 16px;
+}
+
+input {
+  font-family: "Alan Sans", sans-serif;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #26262669;
+  font-size: 1.4rem;
+  accent-color: #262626;
+  padding: 5px;
+}
+
+/* btn ajouter */
+.btn-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 50%;
+  border: none;
+  background-color: #6ebeff;
+  box-shadow: 0 0 07px #646464af;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.list-container {
+  display: none;
+  width: 100%;
+  background-color: var(--primary-color);
+  margin-top: 16px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.uliste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.task {
+  position: relative;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  background-color: #262626;
+  color: #fff;
+  padding: 0.4rem;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+.task.checked {
+  background-color: #4e4e4e;
+  text-decoration: line-through #d1d1d1;
+  font-style: italic;
+  color: #d1d1d1;
+}
+
+/* btn supprimer */
+.btn-del {
+  cursor: pointer;
+  background-color: #ec745f;
+  border: none;
+  border-radius: 8px;
+  padding: 0.2rem;
+  transition: 0.2s ease;
+}
+
+/* btn modifier */
+.btn-mod {
+  cursor: pointer;
+
+  background-color: #6ebeff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.2rem;
+  transition: 0.2s ease;
+}
+
+/* place des btns */
+.btn-area {
+  position: sticky;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+/* btn check */
+.btn-check {
+  cursor: pointer;
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 50%;
+  height: 20px;
+  transition: 0.2s ease;
+}
+
+/* btn annuler */
+.btn-cancel {
+  padding: 0.3rem;
+  background-color: #a681ff;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  display: none;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.btn-add:hover,
+.btn-check:hover,
+.btn-mod:hover,
+.btn-del:hover,
+.btn-cancel:hover {
+  box-shadow: 0 0 07px #2c2c2caf;
+  transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    align-items: flex-start;
+  }
+  .header {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  .main-container {
+    width: 80%;
+    margin: 16px auto;
+  }
+  input {
+    font-size: 16px;
+  }
+  .task {
+    font-size: 16px;
+  }
+}
